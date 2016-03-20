@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AnimationDemo</string>
+    <string name="translate">测试translate(平移动画)</string>
+    <string name="alpha">测试alpha(透明度动画)</string>
+    <string name="rotate">测试rotate(旋转动画)</string>
+    <string name="scale">测试scale(收缩动画)</string>
+</resources>
