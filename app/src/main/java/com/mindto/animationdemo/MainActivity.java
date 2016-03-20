@@ -32,14 +32,24 @@ public class MainActivity extends AppCompatActivity {
                 ,Animation.RELATIVE_TO_PARENT,0.5f,
                 Animation.RELATIVE_TO_SELF,0,
                 Animation.RELATIVE_TO_PARENT,0);
+        //动画持续时长
         translateAnimation.setDuration(2000);
 
         //创建alphaAnimation对象
+        /*构造函数签名
+        public AlphaAnimation(float fromAlpha, 开始透明度
+        float toAlpha 结束透明度
+        ) {}
+        */
         AlphaAnimation alphaAnimation = new AlphaAnimation(1,0);
         //设置动画的持续时长
         alphaAnimation.setDuration(2000);
 
         //创建具体的动画对象
+        /*
+         public RotateAnimation(float fromDegrees, float toDegrees, int pivotXType, float pivotXValue,
+            int pivotYType, float pivotYValue) {}
+        */
         RotateAnimation rotateAnimation = new RotateAnimation(0,360,
                 Animation.RELATIVE_TO_SELF,1f,
                 Animation.RELATIVE_TO_SELF,1f);
@@ -72,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 //执行动画
                 imageView.startAnimation(animationSet);
                 break;
+            //缩放动画
             case R.id.scale:
                 imageView.startAnimation(scaleAnimation);
                 break;
