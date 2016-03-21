@@ -7,13 +7,17 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.mindto.animationdemo.MainActivity">
+    tools:context=".CodeAnimationActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/showXml"/>
     <ImageView
         android:id="@+id/pic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|left"
-        android:src="@drawable/pic"/>
+        android:src="@drawable/pic2"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

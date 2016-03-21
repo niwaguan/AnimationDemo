@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="@android:anim/accelerate_interpolator">
+    <rotate
+        android:fromDegrees="0"
+        android:toDegrees="+360"
+        android:pivotX="100%"
+        android:pivotY="100%"
+        android:duration="3000"/>
+    <!--
+    pivotX和pivotY值的给定
+    pivotX="50"    绝对定位的方式
+    pivotX="50%"   相对于控件自身
+    pivotX="50%p"  相对于父控件
+    -->
+</set>

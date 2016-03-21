@@ -4,4 +4,7 @@
     <string name="alpha">测试alpha(透明度动画)</string>
     <string name="rotate">测试rotate(旋转动画)</string>
     <string name="scale">测试scale(收缩动画)</string>
+    <string name="showCode">这里演示的是代码实现的动画</string>
+    <string name="showXml">这里演示的是XML文件实现的动画</string>
+    <string name="toXml">去看看XML文件\n演示效果</string>
 </resources>

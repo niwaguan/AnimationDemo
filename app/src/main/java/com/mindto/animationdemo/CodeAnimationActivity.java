@@ -1,5 +1,6 @@
 package com.mindto.animationdemo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,12 +12,15 @@ import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * 使用代码的方式实现动画效果
+ */
+public class CodeAnimationActivity extends AppCompatActivity {
     private ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_codeanimation);
         imageView = (ImageView) findViewById(R.id.pic);
     }
     public void onClick(View view){
@@ -28,8 +32,9 @@ public class MainActivity extends AppCompatActivity {
         public TranslateAnimation(int fromXType（开始位置X轴值的选取参考对象）, float fromXValue（值）,下同
          int toXType, float toXValue, int fromYType, float fromYValue, int toYType, float toYValue) {}
         */
-        TranslateAnimation translateAnimation = new TranslateAnimation(Animation.RELATIVE_TO_SELF,0
-                ,Animation.RELATIVE_TO_PARENT,0.5f,
+        TranslateAnimation translateAnimation = new TranslateAnimation(
+                Animation.RELATIVE_TO_SELF,0,
+                Animation.RELATIVE_TO_PARENT,0.5f,
                 Animation.RELATIVE_TO_SELF,0,
                 Animation.RELATIVE_TO_PARENT,0);
         //动画持续时长
@@ -62,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             int pivotXType, float pivotXValue, int pivotYType, float pivotYValue) {}
        */
         ScaleAnimation scaleAnimation = new ScaleAnimation(1, 0.1f, 1, 0.1f,
-                Animation.RELATIVE_TO_SELF,0.5f,
+                Animation.RELATIVE_TO_SELF,0.9f,
                 Animation.RELATIVE_TO_SELF,0.5f);
         scaleAnimation.setDuration(2000);
         switch (view.getId()){
@@ -77,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
             //旋转动画
             case R.id.rotate:
-                animationSet.reset();
                 animationSet.addAnimation(rotateAnimation);
                 //执行动画
                 imageView.startAnimation(animationSet);
@@ -86,6 +90,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.scale:
                 imageView.startAnimation(scaleAnimation);
                 break;
+            //跳转到下一个演示活动
+            case R.id.toXml:
+                Intent intent = new Intent(CodeAnimationActivity.this, XMLAnimationActivity.class);
+                startActivity(intent);
             default:
                 break;
         }
